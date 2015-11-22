@@ -1,0 +1,163 @@
+<html>
+<head>
+  <title>
+  Test your Regular Expression
+  </title>
+</head>
+
+<body>
+<script>
+
+// giovanni
+
+var g, i, m;
+var testo_originale = "";
+var first_time = 1;
+
+function chiamata_match()
+{
+  document.forms.formulario.testo_sub_1.value = "";
+  document.forms.formulario.testo_sub_2.value = "";
+  
+  if(first_time)
+  {
+    var dd = document.getElementById("testo");
+    testo_originale = dd.innerHTML;
+
+    first_time = 0;
+  }
+
+
+  set_flags();
+  match(document.forms.formulario.testo_match.value);
+}
+
+function chiamata_sub()
+{
+  document.forms.formulario.testo_match.value = "";
+
+  if(first_time)
+  {
+    var dd = document.getElementById("testo");
+    testo_originale = dd.innerHTML;
+
+    first_time = 0;
+  }
+
+  set_flags();
+  sub_match(document.forms.formulario.testo_sub_1.value, document.forms.formulario.testo_sub_2.value );
+}
+
+function set_flags()
+{
+   g = (document.forms.formulario.global.checked)? 1 : 0;
+   i = (document.forms.formulario.ignore.checked)? 1 : 0;
+   m = (document.forms.formulario.more.checked)  ? 1 : 0;
+//  alert( '' + g + i + m);
+}
+
+function match(regex)
+{
+   var dopo = "";
+   if(g) { dopo += 'g';}
+   if(i) { dopo += 'i';}
+   if(m) { dopo += 'm';}
+   
+   var rr = eval("/" + regex + "/" + dopo);
+   
+
+  document.getElementById("testo").innerHTML = testo_originale.replace(rr, '<b style=\"color:black;background-color:#99ff00\">' + "$&" + '</b>');
+}
+
+function sub_match(regex, other)
+{
+   var dopo = "";
+   if(g) { dopo += 'g';}
+   if(i) { dopo += 'i';}
+   if(m) { dopo += 'm';}
+
+   var r1 = eval("/" + regex + "/" + dopo);
+   var r2 = other;
+
+  document.getElementById("testo").innerHTML = testo_originale.replace(r1, '<b  style=\"color:black;background-color:#99ffff\">' + r2  + '</b>');
+}
+
+
+function chiamataflags()
+{
+  if(document.forms.formulario.testo_sub_1.value == "")
+  {
+//  alert("chiamata flags 1");
+    chiamata_match();
+  }
+  else
+  {
+//    alert("chiamata flags 2");
+    chiamata_sub();
+  }
+}
+</script>
+
+<form name="formulario">
+<table border=10 bordercolor="blue">
+<tr>
+  <td>
+
+  </td>
+  <td>
+<b style="color: red;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RegEx</b>
+  </td>
+  <td>
+<center style="color: brown;">g</center>
+  </td>
+  <td>
+<center style="color: brown;">i</center>
+  </td>
+  <td>
+<center style="color: brown;">m</center>
+  </td>
+</tr>
+
+<tr>
+  <td>
+<b><center style="color: blue;">match</center></b>
+  </td>
+  <td>
+<center> / <input type="text" name="testo_match" size="61" maxlength="60" onmouseover=chiamataflags() onclick=chiamataflags() onkeyup=chiamata_match() > / </center>
+  </td>
+  <td rowspan="2">
+<center><input type="checkbox" name="global" onclick=chiamataflags()></center>
+  </td>
+  <td rowspan="2">
+<center><input type="checkbox" name="ignore" onclick=chiamataflags()></center>
+  </td>
+  <td rowspan="2">
+<center><input type="checkbox" name="more" onclick=chiamataflags()></center>
+  </td>
+</tr>
+<tr>
+
+  <td>
+  <b><center style="color: blue;">substitute</center></b>
+  </td>
+  <td>
+  <center> / <input type="text" name="testo_sub_1" size="31" maxlength="30" onclick=chiamataflags() onkeyup=chiamata_sub()> / 
+  <input type="text" name="testo_sub_2" size="31" maxlength="30" onclick=chiamataflags() onkeyup=chiamata_sub()> /</center>
+  </td>
+
+</table>
+</form>
+<hr>
+
+<div id="testo">
+<pre>
+example
+1234
+</pre>
+</div>
+</body>
+</html>
+
+
