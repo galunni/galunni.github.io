@@ -8,7 +8,7 @@
 <body>
 <script>
 
-// giovanni
+// giovanni 2015
 
 var g, i, m;
 var testo_originale = "";
@@ -21,12 +21,9 @@ function chiamata_match()
   
   if(first_time)
   {
-    var dd = document.getElementById("testo");
-    testo_originale = dd.innerHTML;
-
+    testo_originale = document.getElementById("testo").innerHTML;
     first_time = 0;
   }
-
 
   set_flags();
   match(document.forms.formulario.testo_match.value);
@@ -38,9 +35,7 @@ function chiamata_sub()
 
   if(first_time)
   {
-    var dd = document.getElementById("testo");
-    testo_originale = dd.innerHTML;
-
+    testo_originale = document.getElementById("testo").innerHTML;
     first_time = 0;
   }
 
@@ -50,9 +45,9 @@ function chiamata_sub()
 
 function set_flags()
 {
-   g = (document.forms.formulario.global.checked)? 1 : 0;
-   i = (document.forms.formulario.ignore.checked)? 1 : 0;
-   m = (document.forms.formulario.more.checked)  ? 1 : 0;
+   g = (document.forms.formulario.global_flag.checked)? 1 : 0;
+   i = (document.forms.formulario.ignore_flag.checked)? 1 : 0;
+   m = (document.forms.formulario.more_flag.checked)  ? 1 : 0;
 //  alert( '' + g + i + m);
 }
 
@@ -65,7 +60,6 @@ function match(regex)
    
    var rr = eval("/" + regex + "/" + dopo);
    
-
   document.getElementById("testo").innerHTML = testo_originale.replace(rr, '<b style=\"color:black;background-color:#99ff00\">' + "$&" + '</b>');
 }
 
@@ -122,13 +116,13 @@ function chiamataflags()
       /
   </td>
   <td rowspan="2">
-    <input type="checkbox" name="global" onclick=chiamataflags()>
+    <input type="checkbox" name="global_flag" onclick=chiamataflags()>
   </td>
   <td rowspan="2">
-    <input type="checkbox" name="ignore" onclick=chiamataflags()>
+    <input type="checkbox" name="ignore_flag" onclick=chiamataflags()>
   </td>
   <td rowspan="2">
-    <input type="checkbox" name="more" onclick=chiamataflags()>
+    <input type="checkbox" name="more_flag" onclick=chiamataflags()>
   </td>
 </tr>
 <tr>
