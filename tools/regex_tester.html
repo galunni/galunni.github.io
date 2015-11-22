@@ -148,7 +148,14 @@ function chiamataflags()
 </form>
 <hr>
 
-  <input type="text" id="testo" value="example 1234" />
+ 
+  <textarea onkeyup="
+document.getElementById('testo').innerHTML = document.getElementById('testo_nuovo').value;"
+id="testo_nuovo" rows="8" cols="60"
+            placeholder="insert your text here...">
+</textarea>
+<br/><br/>
+<div id="testo"> text example 123 </div>
 
 </body>
 </html>
