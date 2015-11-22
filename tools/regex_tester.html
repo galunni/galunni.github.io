@@ -37,16 +37,17 @@ function getFlags()
   return flags;
 }
 
-function matchIt(regex)
+function matchIt()
 {
-   var rr = eval("/" + regex + "/" + getFlags());
+   var rr = 
+   eval("/" + document.forms.formulario.testo_match.value + "/" + getFlags());
        
   document.getElementById("textOutput").innerHTML = 
   testo.replace(rr, '<b>' + "$&" + '</b>');
 }
 
     
-function substituteIt(regex, other)
+function substituteIt()
 {
    
    var r1 = eval("/" + document.forms.formulario.testo_sub_1.value + "/" + getFlags());
@@ -111,9 +112,11 @@ function adoptText()
     <textarea id="textInput" rows="8" cols="60" onkeyup="adoptText()"
     placeholder="insert your text here..."></textarea>
     
-    <pre>
+    <br/><br/>
+      <pre>
     <div id="textOutput">text example 123</div>
     </pre>
+
 </body>
 </html>
 
