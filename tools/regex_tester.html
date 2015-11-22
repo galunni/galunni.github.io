@@ -25,8 +25,8 @@ var testo = "";
     
 function getFlags()
 {
-   var g = (document.forms.formulario.global_flag.checked)? 1 : 0;
-   var i = (document.forms.formulario.ignore_flag.checked)? 1 : 0;
+   var g = (document.forms.formulario.global_flag.checked) ? 1 : 0;
+   var i = (document.forms.formulario.ignore_flag.checked) ? 1 : 0;
    var m = (document.forms.formulario.multi_flag.checked)  ? 1 : 0;
     
   var flags = "";
@@ -41,22 +41,20 @@ function matchIt(regex)
 {
    var rr = eval("/" + regex + "/" + getFlags());
        
-    
   document.getElementById("textOutput").innerHTML = 
   testo.replace(rr, '<b>' + "$&" + '</b>');
 }
 
-    /*
+    
 function substituteIt(regex, other)
 {
    
    var r1 = eval("/" + document.forms.formulario.testo_sub_1.value + "/" + getFlags());
    var r2 = document.forms.formulario.testo_sub_2.value;
 
-    var text_temp = document.getElementById("textInput");
   document.getElementById("textOutput").innerHTML = 
-    text_temp.replace(r1, '<b>' + r2  + '</b>');
-}*/
+    testo.replace(r1, '<b>' + r2  + '</b>');
+}
 
 
 function updateResults()
@@ -101,9 +99,9 @@ function adoptText()
 
   <td> <b>substitute</b> </td>
   <td> /   <input type="text" name="testo_sub_1" size="31" maxlength="30"
-             onkeyup="chiamata_sub()">
+             onkeyup="substituteIt()">
   /   <input type="text" name="testo_sub_2" size="31" maxlength="30" 
-             onkeyup="chiamata_sub()">
+             onkeyup="substituteIt()">
   /   </td>
 
 </table>
@@ -116,9 +114,6 @@ function adoptText()
     <br/><br/>
       
     <div id="textOutput">text example 123</div>
-
-
-
 
 </body>
 </html>
