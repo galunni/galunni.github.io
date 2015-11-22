@@ -99,64 +99,60 @@ function chiamataflags()
 </script>
 
 <form name="formulario">
-<table border=10 bordercolor="blue">
+<table border="3">
 <tr>
   <td>
-
   </td>
   <td>
-<b style="color: red;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RegEx</b>
+    <b>RegEx Tester</b>
   </td>
-  <td>
-<center style="color: brown;">g</center>
-  </td>
-  <td>
-<center style="color: brown;">i</center>
-  </td>
-  <td>
-<center style="color: brown;">m</center>
-  </td>
+  <td>g</td>
+  <td>i</td>
+  <td>m</td>
 </tr>
 
 <tr>
   <td>
-<b><center style="color: blue;">match</center></b>
+    <b>match</b>
   </td>
   <td>
-<center> / <input type="text" name="testo_match" size="61" maxlength="60" onmouseover=chiamataflags() onclick=chiamataflags() onkeyup=chiamata_match() > / </center>
+      / 
+      <input type="text" name="testo_match" size="61" maxlength="60" onmouseover=chiamataflags() 
+      onclick=chiamataflags() onkeyup=chiamata_match() > 
+      /
   </td>
   <td rowspan="2">
-<center><input type="checkbox" name="global" onclick=chiamataflags()></center>
+    <input type="checkbox" name="global" onclick=chiamataflags()>
   </td>
   <td rowspan="2">
-<center><input type="checkbox" name="ignore" onclick=chiamataflags()></center>
+    <input type="checkbox" name="ignore" onclick=chiamataflags()>
   </td>
   <td rowspan="2">
-<center><input type="checkbox" name="more" onclick=chiamataflags()></center>
+    <input type="checkbox" name="more" onclick=chiamataflags()>
   </td>
 </tr>
 <tr>
 
   <td>
-  <b><center style="color: blue;">substitute</center></b>
+    <b>substitute></b>
   </td>
   <td>
-  <center> / <input type="text" name="testo_sub_1" size="31" maxlength="30" onclick=chiamataflags() onkeyup=chiamata_sub()> / 
-  <input type="text" name="testo_sub_2" size="31" maxlength="30" onclick=chiamataflags() onkeyup=chiamata_sub()> /</center>
+  /
+  <input type="text" name="testo_sub_1" size="31" maxlength="30" onclick=chiamataflags() onkeyup=chiamata_sub()>
+  / 
+  <input type="text" name="testo_sub_2" size="31" maxlength="30" onclick=chiamataflags() onkeyup=chiamata_sub()>
+  /
   </td>
 
 </table>
 </form>
 <hr>
 
-<div id="testo">
-<pre>
-example
-1234
-</pre>
-</div>
+  <div id="testo">
+  example
+  1234
+  </div>
+
 </body>
 </html>
 
