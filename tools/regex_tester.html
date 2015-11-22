@@ -101,65 +101,53 @@ function chiamataflags()
     chiamata_sub();
   }
 }
+    
+function copiaCampo()
+{
+    document.getElementById('testo').innerHTML = 
+    document.getElementById('testo_nuovo').value;
+}
+
 </script>
 
 <form name="formulario">
 <table border="3" style="text-align:center;">
 <tr>
-  <td>
-  </td>
-  <td>
-    <b>RegEx Tester</b>
-  </td>
+  <td></td>
+  <td> <b>RegEx Tester</b> </td>
   <td>g</td>
   <td>i</td>
   <td>m</td>
 </tr>
 
 <tr>
-  <td>
-    <b>match</b>
-  </td>
-  <td>
-      / 
-      <input type="text" name="testo_match" size="61" maxlength="60" onmouseover=chiamataflags() 
-      onclick=chiamataflags() onkeyup=chiamata_match() > 
-      /
-  </td>
-  <td rowspan="2">
-    <input type="checkbox" name="global_flag" onclick=chiamataflags()>
-  </td>
-  <td rowspan="2">
-    <input type="checkbox" name="ignore_flag" onclick=chiamataflags()>
-  </td>
-  <td rowspan="2">
-    <input type="checkbox" name="more_flag" onclick=chiamataflags()>
-  </td>
+  <td> <b>match</b> </td>
+  <td> / <input type="text" name="testo_match" size="61"
+                maxlength="60" onmouseover="chiamataflags()" 
+      onclick="chiamataflags()" onkeyup="chiamata_match()" > 
+      / </td>
+  <td rowspan="2"><input type="checkbox" name="global_flag" onclick=chiamataflags()></td>
+  <td rowspan="2"><input type="checkbox" name="ignore_flag" onclick=chiamataflags()></td>
+  <td rowspan="2"><input type="checkbox" name="more_flag" onclick=chiamataflags()></td>
 </tr>
 <tr>
 
-  <td>
-    <b>substitute</b>
-  </td>
-  <td>
-  /
-  <input type="text" name="testo_sub_1" size="31" maxlength="30" onclick=chiamataflags() onkeyup=chiamata_sub()>
-  / 
-  <input type="text" name="testo_sub_2" size="31" maxlength="30" onclick=chiamataflags() onkeyup=chiamata_sub()>
-  /
-  </td>
+  <td> <b>substitute</b> </td>
+  <td> /   <input type="text" name="testo_sub_1" size="31" maxlength="30"
+             onclick="chiamataflags()" onkeyup="chiamata_sub()">
+  /   <input type="text" name="testo_sub_2" size="31" maxlength="30" 
+             onclick="chiamataflags()" onkeyup="chiamata_sub()">
+  /   </td>
 
 </table>
 </form>
 <hr>
-
  
-  <textarea onkeyup="
-document.getElementById('testo').innerHTML = document.getElementById('testo_nuovo').value;"
-id="testo_nuovo" rows="8" cols="60"
-            placeholder="insert your text here...">
-</textarea>
+  <textarea onkeyup="copiaCampo()" id="testo_nuovo" rows="8" cols="60"
+  placeholder="insert your text here..."> </textarea>
+    
 <br/><br/>
+
 <div id="testo">text example 123</div>
 
 </body>
