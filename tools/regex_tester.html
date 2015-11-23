@@ -37,7 +37,6 @@ div{
 
 <body>
 <script>
-
 // giovanni 2015
 
 var testo = "";
@@ -101,8 +100,10 @@ function substituteIt()
 
 </script>
 
-<form name="formulario">
+<textarea id="textInput" rows="8" cols="74" onkeyup="adoptText()"
+    placeholder="insert your text here..."></textarea>
 
+<form name="formulario">
 <table class="centrata" border="3" style="text-align:center;">
 <tr>
   <td colspan="2"> <b>RegEx Tester</b> </td>
@@ -128,22 +129,13 @@ function substituteIt()
   /   <input type="text" name="testo_sub_2" size="31" maxlength="30" 
              onkeyup="substituteIt()" onclick="substituteIt()">
   /   </td>
-
 </table>
 </form>
 <hr>
 
-    <pre class="centrata">
-    <div class="centrata" id="textOutput"></div>
-    </pre>
-
-    <textarea id="textInput" rows="8" cols="74" onkeyup="adoptText()"
-    placeholder="insert your text here..."></textarea>
-    
-    <br/><br/>
-
-
-
+<pre class="centrata">
+  <div class="centrata" id="textOutput"></div>
+</pre>
 
 </body>
 </html>
