@@ -6,6 +6,7 @@
 // http://galunni.github.io/tools/regex_tester.html
 
 var testo = "";
+var activeFunction = "match";
     
 function adoptText()
 {
@@ -18,8 +19,11 @@ function adoptText()
     
 function updateResults()
 {
-  if(document.activeElement.name = "testo_match"){
+  if(activeFunction === "match"){
     matchIt(); 
+  }
+  else if(activeFunction === "subst"){
+    substituteIt(); 
   }
   else if(document.forms.formulario.testo_sub_1.value.length >= 1) {
     substituteIt(); 
@@ -42,6 +46,8 @@ function getFlags()
 
 function matchIt()
 {
+   activeFunction = "match";
+   
    var rr = 
    eval("/" + document.forms.formulario.testo_match.value + "/" + getFlags());
        
@@ -55,6 +61,8 @@ function matchIt()
     
 function substituteIt()
 {
+   activeFunction = "subst";
+   
    var r1 = eval("/" + document.forms.formulario.testo_sub_1.value + "/" + getFlags());
    var r2 = document.forms.formulario.testo_sub_2.value;
   document.getElementById("textOutput").innerHTML = 
