@@ -18,7 +18,10 @@ function adoptText()
     
 function updateResults()
 {
-  if(document.forms.formulario.testo_sub_1.value.length >= 1) {
+  if(document.activeElement.name == "testo_match"){
+      matchIt(); 
+  }
+  else if(document.forms.formulario.testo_sub_1.value.length >= 1) {
     substituteIt(); 
     }
   else if(document.forms.formulario.testo_match.value.length >= 1) {
