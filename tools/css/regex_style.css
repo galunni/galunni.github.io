@@ -1,19 +1,22 @@
 body{
     background-color: #fffffa;
 }
-.centrata{
-     margin: auto;
-}
+
 textarea{
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
+
 div{
     width: 40em;
     margin: 0 auto;
     word-wrap: break-word
 }
+.centrata{
+     margin: auto;
+}
+
 .match{
     background-color: #8C9C88;
 }
