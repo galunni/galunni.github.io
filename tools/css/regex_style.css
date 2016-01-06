@@ -23,3 +23,8 @@ div{
 .subst{
     background-color: #F2DBAE;
 }
+
+.fissa{
+    width: 600px;
+    overflow: auto;
+}
