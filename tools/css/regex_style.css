@@ -29,4 +29,5 @@ div{
 .fissa{
     width: 600px;
     overflow: auto;
+    white-space: pre-wrap;
 }
