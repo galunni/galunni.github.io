@@ -2,6 +2,7 @@
 <html lang='en-US'>
   <head>
     <meta charset='utf-8'>
+    <meta name="robots" content="noindex, nofollow">
     <title>under construction</title>
     
     <script src="tools/js/processing.min.js"></script>
@@ -20,6 +21,7 @@
   <b>Processing:</b><br/>
   <a target="_blank" href="https://processing.org/download/">download</a><br/>
   <a target="_blank" href="http://semmy.me/ide/">online IDE</a><br/>
+  <a target="_blank" href="https://www.khanacademy.org/computer-programming/new/pjs">interactive IDE</a><br/>
   <a target="_blank" href="https://processing.org/reference/">reference</a><br/><br/><br/>
 
   <b>Funzioni:</b>
@@ -42,9 +44,24 @@
   <b>esercizio 1:</b><br/>
   creare un disegno utilizzando le funzioni point() line() ellipse() rect()<br/><br/>
   <canvas data-processing-sources="./esempi/omino.pde"/></canvas><br/>
-  <a target="_blank" href="/esempi/omino.pde">codice sorgente</a>
+  <a target="_blank" href="/esempi/omino.pde">codice sorgente</a><br/><br>
+  
 
-
+<b>Variabili e cicli iterativi (loop):</b>
+  <pre><code>
+  int res = width * height;  // moltiplicazione
+  print(res);                // stampa variabile
+    
+  for(int x=0; x<width; x = x + 15)
+  {
+    println(x);
+    point(x, 50);
+  }  
+  
+  
+    
+    
+  </pre></code>
 
 
 <br/><br/><br/><br/><br/><br/>
