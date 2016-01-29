@@ -7,7 +7,6 @@ strokeWeight(4);
 ellipse(200, 200, 300, 300);
 
 // eyes
-fill(30);
 strokeWeight(14);
 point(170, 160);
 point(270, 140);
