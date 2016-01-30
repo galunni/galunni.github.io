@@ -78,7 +78,7 @@
   </span>
   
   
-<p>
+  <p>
   <b>Variabili e cicli iterativi (loop):</b>
   <pre><code>
   int res = width * height;  // moltiplicazione
@@ -95,7 +95,24 @@
   } 
   </code></pre>
   </p>
-
+  
+  
+  <p>
+  <b>Desgn interattivo:</b>
+  <pre><code>
+  void setup(){
+    // viene eseguito una volta all'infito
+    println("prima di iniziare");
+  }
+  void draw(){
+    // viene eseguito continuamente
+    print("Frame Nr. ");
+    println(frameCount);
+  }
+  </code></pre>
+  </p>
+  
+  
   
   
   <button type="button" onclick="mostra_link('esercizio_6');">Esercizio 6</button>
@@ -131,43 +148,6 @@
 
 
   
-  <p>
-  <b>Variabili e cicli iterativi (loop):</b>
-  <pre><code>
-  int res = width * height;  // moltiplicazione
-  println(res);              // stampa variabile
-  
-  int x = width/2;
-  int y = height/2;
-  println(x);
-  println(y);
-    
-  for(int x=0; x<width; x = x + 15)
-  {
-    ellipse(x, 50, 20,20);
-  } 
-  </pre></code>
-  </p>
-  
-  
-  <p>
-  <b>Desgn interattivo:</b>
-  <pre><code>
-  void setup(){
-    // viene eseguito una volta all'infito
-    println("prima di iniziare");
-  }
-  void draw(){
-    // viene eseguito continuamente
-    print("Frame Nr. ");
-    println(frameCount);
-  }
-  </pre></code>
-  </p>
-  
-  
-  
-  
 <br/><br/><br/><br/><br/><br/>
 <header>
         <h1>under construction</h1>
@@ -178,6 +158,10 @@
         </section>
     </header>
   content<br/><br/>
+
+  
+
+  
 
   </body>
 </html>
