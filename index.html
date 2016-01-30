@@ -66,14 +66,14 @@
   
   <button type="button" onclick="mostra_link('esercizio_1');">Esercizio 1</button>
   <span id="esercizio_1" style="display:none">
-    creare un disegno utilizzando le funzioni point() line() ellipse() rect()<br/><br/>
+    crea un disegno utilizzando le funzioni point() line() ellipse() rect()<br/><br/>
     <canvas data-processing-sources="./esempi/omino.pde"/></canvas><br/>
     <a target="_blank" href="/esempi/omino.pde">codice sorgente</a><br/><br>
   </span>
   
   <button type="button" onclick="mostra_link('esercizio_2');">Esercizio 2</button>
   <span id="esercizio_2" style="display:none">
-    disegnare un pacman<br/><br/>
+    disegna un pacman<br/><br/>
     <canvas data-processing-sources="./esempi/pacman.pde"/></canvas><br/>
   </span>
   
@@ -101,13 +101,22 @@
   <pre><code>
   void setup(){
     // viene eseguito una volta all'infito
+    println("prima di iniziare");
   }
   void draw(){
     // viene eseguito continuamente
+    print("Frame Nr. ");
+    println(frameCount);
   }
   </pre></code>
   </p>
   
+  
+  <button type="button" onclick="mostra_link('esercizio_6');">Esercizio 6</button>
+  <span id="esercizio_6" style="display:none">
+    disegna cerchi<br/><br/>
+    <canvas data-processing-sources="./esempi/interattivo_1.pde"/></canvas><br/>
+  </span>
   
 
 <br/><br/><br/><br/><br/><br/>
