@@ -55,6 +55,7 @@
   line(x1, y1, x2, y2);  // linea che parte da x1 y1 ed arriva ad x2 y2
   ellipse(x, y, larghezza, altezza);   // ellisse con centro nella posizione x y
   rect(x, y, larghezza, altezza);      // rettangolo nella posizione x y (punto in alto a sinistra)
+  triangle(x1, y1, x2, y2, x3, y3);    // tre coordinate per individuare un triangolo
 
   strokeWeight(larghezza);  // dimensioni delle linee, punti e bordi espressa in pixel
   noStroke();               // non usare i bordi
@@ -66,14 +67,16 @@
   
   <button type="button" onclick="mostra_link('esercizio_1');">Esercizio 1</button>
   <span id="esercizio_1" style="display:none">
-  <p>
-  <b>esercizio 1:</b><br/>
-  creare un disegno utilizzando le funzioni point() line() ellipse() rect()<br/><br/>
-  <canvas data-processing-sources="./esempi/omino.pde"/></canvas><br/>
-  <a target="_blank" href="/esempi/omino.pde">codice sorgente</a><br/><br>
-  </p>
+    creare un disegno utilizzando le funzioni point() line() ellipse() rect()<br/><br/>
+    <canvas data-processing-sources="./esempi/omino.pde"/></canvas><br/>
+    <a target="_blank" href="/esempi/omino.pde">codice sorgente</a><br/><br>
   </span>
   
+  <button type="button" onclick="mostra_link('esercizio_2');">Esercizio 2</button>
+  <span id="esercizio_2" style="display:none">
+    disegnare un pacman
+    <canvas data-processing-sources="./esempi/pacman.pde"/></canvas><br/>
+  </span>
   
   <p>
   <b>Variabili e cicli iterativi (loop):</b>
