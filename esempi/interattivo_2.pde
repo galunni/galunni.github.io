@@ -13,6 +13,6 @@ void draw(){
     rect(mouseX, mouseY, 20, 20);
     
     if(mousePressed){
-      background(255);
+      background(245);
     }
 }
