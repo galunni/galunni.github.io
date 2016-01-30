@@ -8,13 +8,13 @@
     <script src="tools/js/processing.min.js"></script>
     <script>
     function mostra_link(identificator){
-      var stato = document.getElementById(identificator).style.visibility;
+      var stato = document.getElementById(identificator).style.display;
 
-      if(stato == 'hidden'){
-        document.getElementById(identificator).style.visibility='visible';
+      if(stato == 'none'){
+        document.getElementById(identificator).style.display='block';
       }
       else{
-        document.getElementById(identificator).style.visibility='hidden';
+        document.getElementById(identificator).style.display='none';
       }
     }
     </script>
@@ -31,7 +31,7 @@
   <a href="https://it.wikipedia.org/wiki/Java_(linguaggio_di_programmazione)">java</a>
   utilizzato per animazioni, videogiochi e progetti interattivi.<br/>
   <button type="button" onclick="mostra_link('link_processing');">Link utili</button>
-  <span id="link_processing" style="visibility:hidden">
+  <span id="link_processing" style="display:none">
   <a target="_blank" href="https://processing.org/download/">download Processing</a><br/>
   <a target="_blank" href="http://semmy.me/ide/">Processing online IDE</a><br/>
   <a target="_blank" href="https://www.khanacademy.org/computer-programming/new/pjs">Processing interactive IDE</a><br/>
