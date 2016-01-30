@@ -1,3 +1,5 @@
+// disegna quadrati di colore diverso a seconda della posizione sullo schermo
+
 void setup(){
     size(200,200);
     background(245);
