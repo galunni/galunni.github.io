@@ -89,17 +89,23 @@
   println(x);
   println(y);
     
-  for(int x=0; x<width; x = x + 15)
-  {
-    ellipse(x, 50, 20,20);
-  } 
+  for(int x=0; x<10; x=x+1){
+    print(x + " ");
+  }
+  
+  
+  strokeWeight(2);
+  for(int pippo=0; pippo<width; pippo = pippo + 4){  
+    point(pippo, 30);
+  }
+
   </code></pre>
   </p>
   
     <button type="button" onclick="mostra_link('esercizio_3');">Esercizio 3</button>
   <span id="esercizio_3" style="display:none">
     crea un disegno utilizzando le funzioni point() line() ellipse() rect()<br/><br/>
-    <canvas data-processing-sources="./esempi/.pde"/></canvas><br/>
+    <canvas data-processing-sources="./esempi/linee_cerchi.pde"/></canvas><br/>
     <a target="_blank" href="/esempi/.pde">codice sorgente</a><br/><br>
   </span>
   
