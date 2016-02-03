@@ -1,26 +1,30 @@
 void setup() {
   size(600, 600);
-  background(245);
+  background(220);
   frameRate(10);
   smooth();
 }
 
 void draw() { 
-  if (keyPressed == true) {
-    superFiore(mouseX, mouseY);
-  } else {
-    fiore(mouseX, mouseY);
-  }
+  if (mouseX > 10 && mouseY > 10 
+  && mouseX < (width-10) && mouseY < (height-10))
+  {
+    if (keyPressed == true) {
+      superFiore(mouseX, mouseY);
+    } else {
+      fiore(mouseX, mouseY);
+    }
 
-  if (mousePressed) {
-    background(245);
+    if (mousePressed) {
+      background(245);
+    }
   }
 }
 
 void fiore(int x, int y) {
   x=x + int(random(-20, 20));
   y=y + int(random(-20, 20));
-  stroke(0,80);
+  stroke(0, 80);
   strokeWeight(1);
   fill(255, 80);
   ellipse(x, y, 9, 9);
