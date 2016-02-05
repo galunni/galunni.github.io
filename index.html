@@ -5,7 +5,6 @@
     <meta name="robots" content="noindex, nofollow">
     <title>under construction</title>
     
-    <script src="js/processing.min.js"></script>
     <script>
     function mostra_link(identificator){
       var stato = document.getElementById(identificator).style.display;
@@ -23,161 +22,15 @@
 
   <body>
     
- 
-  <b style="font-size: 170%;">Brevissima introduzione alla programmazione creativa con <a target="_blank" href="http://processing.org">Processing</a></b>
-
   <p>
-  Linguaggio di programmazione open source basato su
-  <a href="https://it.wikipedia.org/wiki/Java_(linguaggio_di_programmazione)">java</a>
-  utilizzato per animazioni, videogiochi e progetti interattivi<br/><br/>
-  <button type="button" onclick="mostra_link('link_processing');">Link utili</button>
-  <span id="link_processing" style="display:none">
-  <a target="_blank" href="https://processing.org/download/">download Processing</a><br/>
-  <a target="_blank" href="http://semmy.me/ide/">Processing online IDE</a><br/>
-  <a target="_blank" href="https://www.khanacademy.org/computer-programming/new/pjs">Processing interactive IDE</a><br/>
-  <a target="_blank" href="https://processing.org/reference/">Processing reference</a>
+  <button type="button" onclick="mostra_link('link_miei');">Link</button>
+  <span id="link_miei" style="display:none">
+  <a target="_blank" href="https://github.com/galunni/">code repository</a><br/>
   </span>
   </p>
 
   <hr>
-  <p>
-  <b>Funzioni:</b><br/>
-  esempi: calcola tasse, verifica password, verifica formato corretto di una data,  comprimi una stringa... ?
-  <pre><code>
-  size(larghezza, altezza); // dimensioni finestra
-  background(rgb);          // colore di sfondo espresso in un numero da 0 (nero) a 255 (bianco)
 
-  point(x, y);           // punto nella posizione x y
-  line(x1, y1, x2, y2);  // linea che parte da x1 y1 ed arriva ad x2 y2
-  ellipse(x, y, larghezza, altezza);   // ellisse con centro nella posizione x y
-  rect(x, y, larghezza, altezza);      // rettangolo nella posizione x y (punto in alto a sinistra)
-  triangle(x1, y1, x2, y2, x3, y3);    // tre coordinate per individuare un triangolo
-
-  strokeWeight(larghezza);  // dimensioni delle linee, punti e bordi espressa in pixel
-  noStroke();               // non usare i bordi
-
-  fill(180);                // colore usato per riempire le forme espresso in un numero da 0 (nero) a 255 (bianco)
-
-  </code></pre>
-  </p>
-  
-  <button type="button" onclick="mostra_link('esercizio_1');">Esercizio 1</button>
-  <span id="esercizio_1" style="display:none">
-    crea un disegno utilizzando le funzioni point() line() ellipse() rect()<br/><br/>
-    <canvas data-processing-sources="esempi/omino.pde"/></canvas><br/>
-    <a target="_blank" href="esempi/omino.pde">codice sorgente</a><br/><br>
-  </span>
-  
-  <button type="button" onclick="mostra_link('esercizio_2');">Esercizio 2</button>
-  <span id="esercizio_2" style="display:none">
-    disegna un pacman<br/><br/>
-    <canvas data-processing-sources="esempi/pacman.pde"/></canvas><br/>
-  </span>
-  
-  
-  <hr>
-  <p>
-  <b>Variabili e cicli iterativi (loop):</b><br/>
-  esempi variabili: query nei motori di ricerca, eta' in un formulario, nome utente nei social network, url...? <br/>
-  esempi cicli: cerca elemento in una lista (* non efficiente), un semplice crawler web, macchina in una catena di montaggio
-  
-  <pre><code>
-  int res = width * height;  // moltiplicazione
-  println(res);              // stampa variabile
-  
-  int x = width/2;
-  int y = height/2;
-  println(x);
-  println(y);
-    
-  for(int x=0; x<10; x=x+1){
-    print(x + " ");
-  }
-  
-  
-  strokeWeight(2);
-  for(int pippo=0; pippo&lt;width; pippo = pippo + 4){  
-    point(pippo, 30);
-  }
-
-  </code></pre>
-  </p>
-  
-    <button type="button" onclick="mostra_link('esercizio_3');">Esercizio 3</button>
-  <span id="esercizio_3" style="display:none">
-    crea un disegno utilizzando le funzioni point() line() ellipse() rect()<br/><br/>
-    <canvas data-processing-sources="esempi/linee_cerchi.pde"/></canvas><br/>
-    <a target="_blank" href="esempi/linee_cerchi.pde">codice sorgente</a><br/><br>
-  </span>
-  
-  <button type="button" onclick="mostra_link('esercizio_4');">Esercizio 4</button>
-  <span id="esercizio_4" style="display:none">
-    crea una serie di linee che cambiano colore<br/><br/>
-    <canvas data-processing-sources="esempi/linee_cambiacolore.pde"/></canvas><br/>
-    <a target="_blank" href="esempi/linee_cambiacolore.pde">codice sorgente</a><br/><br>
-  </span>
-  
-  <button type="button" onclick="mostra_link('esercizio_5');">Esercizio 5</button>
-  <span id="esercizio_5" style="display:none">
-    usa due cicli for annidati<br/><br/>
-    <canvas data-processing-sources="esempi/for_annidati.pde"/></canvas><br/>
-    <a target="_blank" href="esempi/for_annidati.pde">codice sorgente</a><br/><br>
-  </span>
-  
-  
-  <hr>
-  <p>
-  <b>Codice interattivo:</b><br/>
-  esempi: programmi di grafica, videogiochi, installazioni di interaction design
-  
-  <pre><code>
-  void setup(){
-    // viene eseguito una volta all'infito
-    println("prima di iniziare");
-  }
-  void draw(){
-    // viene eseguito continuamente
-    print("Frame Nr. ");
-    println(frameCount);
-  }
-  </code></pre>
-  </p>
-  
-  
-  
-  
-  <button type="button" onclick="mostra_link('esercizio_6');">Esercizio 6</button>
-  <span id="esercizio_6" style="display:none">
-    disegna cerchi<br/><br/>
-    <canvas data-processing-sources="esempi/interattivo_1.pde"/></canvas><br/>
-    <a target="_blank" href="esempi/interattivo_1.pde">codice sorgente</a><br/><br>
-  </span>
-  
-    <button type="button" onclick="mostra_link('esercizio_7');">Esercizio 7</button>
-  <span id="esercizio_7" style="display:none">
-    disegna quadrati di colore diverso a seconda della posizione sullo schermo<br/><br/>
-    <canvas data-processing-sources="esempi/interattivo_2.pde"/></canvas><br/>
-    <a target="_blank" href="esempi/interattivo_2.pde">codice sorgente</a><br/><br>
-  </span>
-  
-    <button type="button" onclick="mostra_link('esercizio_8');">Esercizio 8</button>
-  <span id="esercizio_8" style="display:none">
-    cambia il colore delle linee al variare del tempo (frameCount)<br/><br/>
-    <canvas data-processing-sources="esempi/interattivo_3.pde"/></canvas><br/>
-    <a target="_blank" href="esempi/interattivo_3.pde">codice sorgente</a><br/><br>
-  </span>
-  
-    <button type="button" onclick="mostra_link('esercizio_9');">Esercizio 9</button>
-  <span id="esercizio_9" style="display:none">
-    disegna forme complesse tramite cicli iterativi in un ambiente interattivo<br/><br/>
-    <canvas data-processing-sources="esempi/fiori.pde"/></canvas><br/>
-    <a target="_blank" href="esempi/fiori.pde">codice sorgente</a><br/><br>
-  </span>
-  
-
-
-
-  <hr>
   
 <br/><br/><br/><br/><br/><br/>
 <header>
