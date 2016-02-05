@@ -2,6 +2,7 @@ License
 ---
 
 Copyright (c) 2016 Giovanni Alunni
+
 The MIT License (MIT)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
