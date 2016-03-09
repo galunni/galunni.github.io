@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html lang='en-US'>
   <head>
-    <meta charset='utf-8'>
+
     <meta name="robots" content="noindex, nofollow">
     <title>under construction</title>
+
+    <meta charset='utf-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     
     <script>
     function mostra_link(identificator){
@@ -21,13 +27,33 @@
 
 
   <body>
+
+
+    <div class='container'>
+
+    <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#testo1">contenuto 1</button>
+    <div id="testo1" class="collapse">
+    testo di esempio...
+    </div>
+
+<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#testo2">contenuto 2</button>
+    <div id="testo2" class="collapse">
+    testo di esempio...
+    </div>
+
+<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#testo3">contenuto 3</button>
+    <div id="testo3" class="collapse">
+    testo di esempio...
+    </div>
+</div>
     
-  <p>
+<!--  <p>
   <button type="button" onclick="mostra_link('link_miei');">Link</button>
   <span id="link_miei" style="display:none">
   <a target="_blank" href="https://github.com/galunni/">code repository</a><br/>
   </span>
   </p>
+-->
 
   <hr>
 
