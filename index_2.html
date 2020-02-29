@@ -213,6 +213,16 @@ cd
                 <td></td>
               </tr>
               <tr>
+                <td>git remote -v </td>
+                <td>shows location of repositories</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>git branch -a</td>
+                <td>show configuration data</td>
+                <td></td>
+              </tr>
+              <tr>
                 <td>git config --global user.name</td>
                 <td>set user name</td>
                 <td>git config --global user.name 'papero'</td>
@@ -230,8 +240,9 @@ cd
               <tr>
                 <td>git clone</td>
                 <td>clone a repository in actual directory</td>
-                <td>git clone /path/to/directory # clone a repository from local filesystem </br>
-                git clone username@host:/path/to/repository # clone a repository from remote</td>
+                <td>git clone username@host:/path/to/repository # clone a repository from remote creating a directory for it</br>
+                git clone ../path/to/repository . # clone a repository from local filesystem using this directory to contain files
+              </td>
               </tr>
               <tr>
                 <td>git checkout — .</td>
@@ -241,7 +252,7 @@ cd
               <tr>
                 <td>git add</td>
                 <td>adds files/directories to the index(stage) so they will be included by the commit command</td>
-                <td>git add my_file.txt</br> 
+                <td>git add my_file.txt</br>
                     git add . # using wildcards</br>
                     git add *</br>git text_??.txt</td>
               </tr>
@@ -274,7 +285,8 @@ cd
               <tr>
                 <td>git branch</td>
                 <td>list all branches in repository and show selected branch</td>
-                <td>git branch -D new-branch     # delete the new-branch branch</td>
+                <td>git branch -D new-branch     # delete the new-branch branch</br>
+                    git branch -a # list all branches (local and remote ones)</td>
               </tr>
               <tr>
                 <td>git checkout</td>
@@ -311,14 +323,14 @@ cd
               <tr>
                 <td>git push</td>
                 <td>Uploads all local branch commits to remote repository</td>
-                <td></td>
+                <td>git push origin master</td>
               </tr>
               <tr>
                 <td>git pull</td>
                 <td>Updates your current local working branch with all new commits from
                 the corresponding remote branch on GitHub. git pull is a combination
                 of git fetch and git merge</td>
-                <td></td>
+                <td>git pull origin master</td>
               </tr>
             </tbody>
           </table>
