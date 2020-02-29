@@ -7,7 +7,7 @@
 
   <meta charset='utf-8'>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+cd
   <script>
 
   </script>
@@ -241,12 +241,15 @@
               <tr>
                 <td>git add</td>
                 <td>adds files/directories to the index(stage) so they will be included by the commit command</td>
-                <td>git add my_file.txt</br>git add .</br>git add *</br>git text_??.txt</td>
+                <td>git add my_file.txt</br>
+                    git add -A # add all</td>br>
+                    git add . # using wildcards</br>
+                    git add *</br>git text_??.txt</td>
               </tr>
               <tr>
-                <td>git reset HEAD *</td>
+                <td>git reset</td>
                 <td>unstage all files if not committed yet</td>
-                <td></td>
+                <td>git reset file.txt # unstage a specific file</td>
               </tr>
               <tr>
                 <td>git commit</td>
@@ -261,7 +264,7 @@
               </tr>
               <tr>
                 <td>git status</td>
-                <td>show current status of repository</td>
+                <td>show current status of repository (untracked, added and modified files)</td>
                 <td></td>
               </tr>
               <tr>
@@ -290,6 +293,11 @@
                 <td>remove from git</td>
                 <td>git rm file1.txt # set file for remove (in stage) and delete from file system</br> git commit -m "remove file1.txt" # also remove file in repository
                 </td>
+              </tr>
+              <tr>
+                <td>rm -rf .git</td>
+                <td>stop using git on the current project</td>
+                <td></td>
               </tr>
               <tr>
                 <td>git fetch</td>
